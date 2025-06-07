@@ -13,7 +13,7 @@ function App() {
 
   const fetchUrls = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/urls');
+      const response = await fetch('http://localhost:8000/api/urls');
       const data = await response.json();
       setUrls(data);
     } catch (error) {
@@ -27,7 +27,7 @@ function App() {
     setSuccess('');
 
     try {
-      const response = await fetch('http://localhost:5000/api/shorten', {
+      const response = await fetch('http://localhost:8000/api/shorten', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -91,8 +91,8 @@ function App() {
                     </a>
                   </td>
                   <td>
-                    <a href={`http://localhost:5000/${url.short_key}`} target="_blank" rel="noopener noreferrer">
-                      {`http://localhost:5000/${url.short_key}`}
+                    <a href={`http://localhost:8000/${url.short_key}`} target="_blank" rel="noopener noreferrer">
+                      {`http://localhost:8000/${url.short_key}`}
                     </a>
                   </td>
                   <td>{new Date(url.created_at).toLocaleString()}</td>

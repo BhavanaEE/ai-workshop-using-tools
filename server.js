@@ -4,10 +4,18 @@ const cors = require('cors');
 const { nanoid } = require('nanoid');
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 8000;
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: 'http://localhost:3000',
+  methods: ['GET', 'POST', 'OPTIONS'],
+  allowedHeaders: ['Content-Type'],
+  credentials: true
+}));
+
+// Handle preflight requests
+app.options('*', cors());
 app.use(express.json());
 
 // Database setup
