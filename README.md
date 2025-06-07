@@ -51,7 +51,7 @@ A full-stack URL shortener application built with Node.js, Express, React, and S
 
 5. Access the application:
    - Frontend: http://localhost:3000
-   - Backend API: http://localhost:5000
+   - Backend API: http://localhost:8000
 
 ## API Endpoints
 
@@ -63,7 +63,7 @@ A full-stack URL shortener application built with Node.js, Express, React, and S
   - Returns: Array of URL objects
 
 - `GET /:shortKey` - Redirect to original URL
-  - Example: `http://localhost:5000/abc123` redirects to the original URL
+  - Example: `http://localhost:8000/abc123` redirects to the original URL
 
 ## Database
 
